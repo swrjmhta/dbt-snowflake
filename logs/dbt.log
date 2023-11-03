@@ -28,3 +28,79 @@ Happy modeling!
 [0m13:58:45.420570 [debug] [MainThread]: Command `dbt init` succeeded at 13:58:45.420302 after 201.39 seconds
 [0m13:58:45.421433 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f29a9a25750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f29abd06cb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f29aa1fd090>]}
 [0m13:58:45.421954 [debug] [MainThread]: Flushing usage events
+[0m15:08:26.953806 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59f1431810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59f1c615a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59f1c61540>]}
+
+
+============================== 15:08:26.957281 | 3041777c-279f-4eff-bc78-0be9ce4ff6e8 ==============================
+[0m15:08:26.957281 [info ] [MainThread]: Running with dbt=1.6.7
+[0m15:08:26.958243 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/home/swaraj/.dbt', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m15:08:26.958788 [info ] [MainThread]: dbt version: 1.6.7
+[0m15:08:26.959124 [info ] [MainThread]: python version: 3.10.12
+[0m15:08:26.959416 [info ] [MainThread]: python path: /home/swaraj/Documents/dbt-snowflake/dbt-venv/bin/python3
+[0m15:08:26.959701 [info ] [MainThread]: os info: Linux-6.2.0-33-generic-x86_64-with-glibc2.35
+[0m15:08:27.122713 [info ] [MainThread]: Using profiles dir at /home/swaraj/.dbt
+[0m15:08:27.123260 [info ] [MainThread]: Using profiles.yml file at /home/swaraj/.dbt/profiles.yml
+[0m15:08:27.123606 [info ] [MainThread]: Using dbt_project.yml file at /home/swaraj/Documents/dbt-snowflake/dbt_project.yml
+[0m15:08:27.124051 [info ] [MainThread]: adapter type: snowflake
+[0m15:08:27.124356 [info ] [MainThread]: adapter version: 1.6.5
+[0m15:08:27.124646 [info ] [MainThread]: Configuration:
+[0m15:08:27.124902 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:08:27.125145 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m15:08:27.125414 [info ] [MainThread]: Required dependencies:
+[0m15:08:27.125674 [debug] [MainThread]: Executing "git --help"
+[0m15:08:27.127730 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:08:27.128139 [debug] [MainThread]: STDERR: "b''"
+[0m15:08:27.128402 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:08:27.128753 [info ] [MainThread]: Connection:
+[0m15:08:27.129219 [info ] [MainThread]:   account: nr76907.ap-south-1.aws
+[0m15:08:27.129597 [info ] [MainThread]:   user: swaraj.mehta@lumiq.ai
+[0m15:08:27.129922 [info ] [MainThread]:   database: SNOWFLAKE_DEMO_DB
+[0m15:08:27.130241 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m15:08:27.130591 [info ] [MainThread]:   role: PUBLIC
+[0m15:08:27.130864 [info ] [MainThread]:   schema: PUBLIC
+[0m15:08:27.131158 [info ] [MainThread]:   authenticator: None
+[0m15:08:27.131499 [info ] [MainThread]:   private_key_path: /home/swaraj/Documents/dbt-snowflake/snowflake_key/rsa_key.p8
+[0m15:08:27.131828 [info ] [MainThread]:   token: None
+[0m15:08:27.132138 [info ] [MainThread]:   oauth_client_id: None
+[0m15:08:27.132452 [info ] [MainThread]:   query_tag: None
+[0m15:08:27.132768 [info ] [MainThread]:   client_session_keep_alive: False
+[0m15:08:27.133064 [info ] [MainThread]:   host: None
+[0m15:08:27.133362 [info ] [MainThread]:   port: None
+[0m15:08:27.133635 [info ] [MainThread]:   proxy_host: None
+[0m15:08:27.133913 [info ] [MainThread]:   proxy_port: None
+[0m15:08:27.134201 [info ] [MainThread]:   protocol: None
+[0m15:08:27.134490 [info ] [MainThread]:   connect_retries: 1
+[0m15:08:27.134783 [info ] [MainThread]:   connect_timeout: None
+[0m15:08:27.135062 [info ] [MainThread]:   retry_on_database_errors: False
+[0m15:08:27.135372 [info ] [MainThread]:   retry_all: False
+[0m15:08:27.135682 [info ] [MainThread]:   insecure_mode: False
+[0m15:08:27.135984 [info ] [MainThread]:   reuse_connections: None
+[0m15:08:27.136360 [info ] [MainThread]: Registered adapter: snowflake=1.6.5
+[0m15:08:27.136883 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m15:08:27.137564 [debug] [MainThread]: Using snowflake connection "debug"
+[0m15:08:27.137913 [debug] [MainThread]: On debug: select 1 as id
+[0m15:08:27.138220 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:08:27.654236 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m15:08:27.655299 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m15:08:27.656090 [debug] [MainThread]: On debug: No close available on handle
+[0m15:08:27.656656 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m15:08:27.657271 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m15:08:27.657824 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/swaraj/Documents/dbt-snowflake/dbt_project.yml> not found
+
+[0m15:08:27.658356 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  250001 (08001): Failed to connect to DB: nr76907.ap-south-1.aws.snowflakecomputing.com:443. JWT token is invalid.
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m15:08:27.659267 [debug] [MainThread]: Command `dbt debug` failed at 15:08:27.659119 after 0.71 seconds
+[0m15:08:27.659692 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m15:08:27.660126 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59f1431810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59ebc13100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59ebc12440>]}
+[0m15:08:27.660637 [debug] [MainThread]: Flushing usage events

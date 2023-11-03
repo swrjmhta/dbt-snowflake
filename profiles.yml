@@ -1,0 +1,20 @@
+dbt_snowflake_project:
+  target: dev
+  outputs:
+   dev:
+      type: snowflake
+      account: nr76907.ap-south-1.aws 
+      user: swaraj.mehta@lumiq.ai
+      role: PUBLIC
+
+      # Keypair config
+      private_key_path: /home/swaraj/Documents/dbt-snowflake/snowflake_key/rsa_key.p8
+
+      # or private_key instead of private_key_path
+      private_key_passphrase: swaraj
+
+      database: SNOWFLAKE_DEMO_DB 
+      warehouse: COMPUTE_WH 
+      schema: PUBLIC
+      threads: 1
+      client_session_keep_alive: False
