@@ -1,0 +1,36 @@
+FROM ubuntu:20.04
+USER root
+RUN apt update
+RUN apt install -y software-properties-common
+#RUN add-apt-repository ppa:deadsnakes/ppa
+RUN apt install -y curl
+RUN apt install -y sudo
+RUN apt install unzip
+RUN apt install -y python3.9
+RUN apt install -y python3.9-distutils
+RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+RUN python3.9 get-pip.py
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"  
+RUN unzip awscliv2.zip
+RUN ./aws/install
+RUN ["apt-get", "install", "-y", "vim"]
+RUN apt-get install -y git
+#RUN git clone https://github.com/lumiqai/dbt-glue.git
+RUN mkdir -p dbt-glue
+WORKDIR dbt-glue
+RUN pip install dbt-snowflake
+RUN pip install dbt-core
+WORKDIR /apps
+#RUN mkdir ./DBT_project
+#COPY DBT_project ./DBT_project/
+ADD dbt_snowflake_project .
+WORKDIR /root
+RUN mkdir ./.dbt
+COPY ./profiles.yml ./.dbt/
+## in requirements.txt , it contain the python packages we need to install in our container.
+WORKDIR /apps
+#ADD hdfc_amc_empower_dbt_projects .
+#COPY requirements.txt ./
+#RUN pip install --no-cache-dir -r /apps/requirements.txt
+WORKDIR /apps/dbt_snowflake_project
+CMD ["/usr/local/bin/dbt","debug"]
