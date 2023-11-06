@@ -9,10 +9,8 @@ phases:
     commands:
       - echo Building the Docker image...
       - docker build -t dbt-snowflake-mainimage .
-      - docker tag dbt-snowflake-mainimage:latest 660061364911.dkr.ecr.ap-south-1.amazonaws.com/dbt-snowflake-repo:latest
+      - docker tag dbt-snowflake-mainimage:latest 660061364911.dkr.ecr.ap-south-1.amazonaws.com/dbt-snowflake-repo:$CODE_BUILD_NUMBER
   post_build:
     commands:
       - echo Pushing the Docker image to Amazon ECR...
-      - docker push 660061364911.dkr.ecr.ap-south-1.amazonaws.com/dbt-snowflake-repo:latest
-artifacts:
-  files: imagedefinitions.json
+      - docker push 660061364911.dkr.ecr.ap-south-1.amazonaws.com/dbt-snowflake-repo:$CODE_BUILD_NUMBER
