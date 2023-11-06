@@ -5,12 +5,13 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 660061364911.dkr.ecr.ap-south-1.amazonaws.com
+      - BUILD_NUMBER=$(date '+%Y%m%d%H%M%S')
   build:
     commands:
       - echo Building the Docker image...
       - docker build -t dbt-snowflake-mainimage .
-      - docker tag dbt-snowflake-mainimage:latest 660061364911.dkr.ecr.ap-south-1.amazonaws.com/dbt-snowflake-repo:$CODE_BUILD_NUMBER
+      - docker tag dbt-snowflake-mainimage:latest 660061364911.dkr.ecr.ap-south-1.amazonaws.com/dbt-snowflake-repo:$BUILD_NUMBER
   post_build:
     commands:
       - echo Pushing the Docker image to Amazon ECR...
-      - docker push 660061364911.dkr.ecr.ap-south-1.amazonaws.com/dbt-snowflake-repo:$CODE_BUILD_NUMBER
+      - docker push 660061364911.dkr.ecr.ap-south-1.amazonaws.com/dbt-snowflake-repo:$BUILD_NUMBER
