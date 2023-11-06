@@ -1,4 +1,4 @@
-FROM dbt-snowflake-baseimage 
+FROM 660061364911.dkr.ecr.ap-south-1.amazonaws.com/dbt-snowflake-repo:latest 
 USER root
 #RUN mkdir -p dbt-glue
 #WORKDIR dbt-glue
